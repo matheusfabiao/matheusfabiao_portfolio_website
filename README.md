@@ -4,15 +4,23 @@ Este projeto é um website que serve como uma vitrine para o meu trabalho, habil
 
 ## 🚀 Tecnologias
 
+### Backend
 - Python 3.12+
 - Django 5.1+
 - PostgreSQL
+
+### Frontend
+- Vite (Bundler)
+- Tailwind CSS v4
+- DaisyUI
+- Node.js
 
 ## 📋 Pré-requisitos
 
 - Python 3.12 ou superior
 - PostgreSQL
 - UV (Gerenciador de pacotes Python)
+- Node.js 18+ e npm
 
 ## 🔧 Instalação
 
@@ -38,24 +46,37 @@ Este projeto é um website que serve como uma vitrine para o meu trabalho, habil
      source .venv/bin/activate
      ```
 
-5. Instale as dependências do projeto:
+5. Instale as dependências do Python:
    ```bash
    uv pip install .
-5. Copie o arquivo de exemplo de variáveis de ambiente:
+   ```
+
+6. Instale as dependências do Node.js:
+   ```bash
+   npm install
+7. Copie o arquivo de exemplo de variáveis de ambiente:
    ```bash
    cp env_files/.env.example env_files/.env
    ```
-6. Configure as variáveis de ambiente no arquivo `.env`
-7. Execute as migrações:
+8. Configure as variáveis de ambiente no arquivo `.env`
+9. Execute as migrações:
    ```bash
    task migrate
    ```
 
 ## 🏃‍♂️ Executando o projeto
 
-```bash
-task run
-```
+1. Inicie o servidor de desenvolvimento do Django:
+   ```bash
+   task run
+   ```
+
+2. Em outro terminal, inicie o servidor de desenvolvimento do Vite:
+   ```bash
+   npm run dev
+   ```
+
+O projeto estará disponível em `http://localhost:8000` e o servidor de desenvolvimento do Vite em `http://localhost:5173`
 
 ## 🧪 Testes
 
@@ -70,10 +91,23 @@ task test
 ├── env_files/          # Arquivos de configuração de ambiente
 ├── src/                # Código fonte do projeto
 │   ├── core/           # Configurações principais do Django
+│   ├── portfolio/      # Aplicação principal
+│   │   ├── migrations/ # Migrações do banco de dados
+│   │   ├── models.py   # Modelos de dados
+│   │   ├── views.py    # Views da aplicação
+│   │   └── urls.py     # Configuração de URLs
 │   ├── static/         # Arquivos estáticos
+│   │   ├── css/        # Estilos CSS
+│   │   └── js/         # Scripts JavaScript
 │   └── templates/      # Templates HTML
-├── pyproject.toml      # Configuração do projeto e dependências
-└── README.md          # Este arquivo
+│       └── portfolio/  # Templates da aplicação principal
+├── node_modules/       # Dependências do Node.js (não versionado)
+├── package.json        # Dependências e scripts do Node.js
+├── package-lock.json   # Lock de dependências do Node.js
+├── pyproject.toml      # Configuração do projeto Python
+├── vite.config.mjs     # Configuração do Vite
+├── .gitignore          # Arquivos ignorados pelo Git
+└── README.md           # Este arquivo
 ```
 
 ## 📝 Licença
