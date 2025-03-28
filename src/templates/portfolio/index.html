@@ -1,1 +1,17 @@
-<h1>Olá, Mundo!</h1>
+{% load django_vite %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    {% vite_hmr_client %}
+    {% vite_asset 'src/static/js/main.js' %}
+</head>
+<body>
+    <h1 class="text-4xl p-8">Olá, mundo!</h1>
+    <!-- botão daisyui -->
+    <button class="btn btn-primary">Clique aqui</button>
+</body>
+</html>
