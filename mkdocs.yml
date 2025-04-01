@@ -1,6 +1,8 @@
-site_name: My Docs
+site_name: Matheus Fabião Portfólio
+site_description: Site pessoal do Matheus Fabião, desenvolvedor de software.
+site_author: Matheus Fabião
 repo_url: https://github.com/matheusfabiao/matheusfabiao_portfolio_website
-repo_name: 'Matheus Fabiao Portfolio Website'
+repo_name: 'Matheus Fabião Portfólio'
 edit_uri: tree/main/docs
 
 theme:
