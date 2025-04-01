@@ -13,7 +13,13 @@ Este projeto é um website que serve como uma vitrine para o meu trabalho, habil
 - Vite (Bundler)
 - Tailwind CSS v4
 - DaisyUI
+- HTMX
+- AlpineJS
 - Node.js
+
+### Documentação
+- MkDocs
+- Material for MkDocs
 
 ## 📋 Pré-requisitos
 
@@ -25,6 +31,10 @@ Este projeto é um website que serve como uma vitrine para o meu trabalho, habil
 ## 🔧 Instalação
 
 1. Clone o repositório
+   ```bash
+   git clone https://github.com/matheusfabiao/matheusfabiao_portfolio_website.git
+   cd matheusfabiao_portfolio_website
+   ```
 
 2. Instale o UV (caso ainda não tenha):
    ```bash
@@ -54,11 +64,15 @@ Este projeto é um website que serve como uma vitrine para o meu trabalho, habil
 6. Instale as dependências do Node.js:
    ```bash
    npm install
+   ```
+
 7. Copie o arquivo de exemplo de variáveis de ambiente:
    ```bash
    cp env_files/.env.example env_files/.env
    ```
+
 8. Configure as variáveis de ambiente no arquivo `.env`
+
 9. Execute as migrações:
    ```bash
    task migrate
@@ -76,7 +90,15 @@ Este projeto é um website que serve como uma vitrine para o meu trabalho, habil
    npm run dev
    ```
 
-O projeto estará disponível em `http://localhost:8000` e o servidor de desenvolvimento do Vite em `http://localhost:5173`
+3. Para acessar a documentação, execute:
+   ```bash
+   mkdocs serve
+   ```
+
+O projeto estará disponível em:
+- Aplicação: `http://localhost:8000`
+- Assets (Vite): `http://localhost:5173`
+- Documentação: `http://localhost:8000/docs`
 
 ## 🧪 Testes
 
@@ -88,26 +110,33 @@ task test
 
 ```
 .
-├── env_files/          # Arquivos de configuração de ambiente
-├── src/                # Código fonte do projeto
-│   ├── core/           # Configurações principais do Django
-│   ├── portfolio/      # Aplicação principal
-│   │   ├── migrations/ # Migrações do banco de dados
-│   │   ├── models.py   # Modelos de dados
-│   │   ├── views.py    # Views da aplicação
-│   │   └── urls.py     # Configuração de URLs
-│   ├── static/         # Arquivos estáticos
-│   │   ├── css/        # Estilos CSS
-│   │   └── js/         # Scripts JavaScript
-│   └── templates/      # Templates HTML
-│       └── portfolio/  # Templates da aplicação principal
-├── node_modules/       # Dependências do Node.js (não versionado)
-├── package.json        # Dependências e scripts do Node.js
-├── package-lock.json   # Lock de dependências do Node.js
-├── pyproject.toml      # Configuração do projeto Python
-├── vite.config.mjs     # Configuração do Vite
-├── .gitignore          # Arquivos ignorados pelo Git
-└── README.md           # Este arquivo
+├── docs/                 # Documentação do projeto
+│   ├── assets/           # Recursos da documentação
+│   ├── getting_started/  # Guias de início rápido
+│   └── stylesheets/      # Estilos personalizados da documentação
+├── env_files/            # Arquivos de configuração de ambiente
+├── src/                  # Código fonte do projeto
+│   ├── core/             # Configurações principais do Django
+│   │   ├── settings.py   # Configurações do projeto
+│   │   ├── urls.py       # URLs principais
+│   │   └── wsgi.py       # Configuração WSGI
+│   ├── portfolio/        # Aplicação principal
+│   │   ├── migrations/   # Migrações do banco de dados
+│   │   ├── models.py     # Modelos de dados
+│   │   ├── views.py      # Views da aplicação
+│   │   └── urls.py       # Configuração de URLs
+│   ├── static/           # Arquivos estáticos
+│   │   ├── css/          # Estilos CSS e componentes
+│   │   ├── js/           # Scripts JavaScript
+│   │   └── img/          # Imagens e recursos visuais
+│   └── templates/        # Templates HTML
+│       ├── components/   # Componentes reutilizáveis
+│       └── portfolio/    # Templates específicos
+├── mkdocs.yml            # Configuração da documentação
+├── package.json          # Dependências do frontend
+├── pyproject.toml        # Dependências do Python
+├── vite.config.mjs       # Configuração do Vite
+└── uv.lock               # Lock file do gerenciador de pacotes Python
 ```
 
 ## 📝 Licença

@@ -1,0 +1,22 @@
+site_name: My Docs
+repo_url: https://github.com/matheusfabiao/matheusfabiao_portfolio_website
+repo_name: 'Matheus Fabiao Portfolio Website'
+edit_uri: tree/main/docs
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/Logo Verde.png
+  favicon: assets/Logo Verde.png
+
+nav:
+  - Início: index.md
+  - Começando:
+    - Instalação: getting-started/installation.md
+    - Configuração: getting-started/configuration.md
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
