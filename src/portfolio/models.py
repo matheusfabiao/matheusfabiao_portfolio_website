@@ -29,9 +29,7 @@ class Project(models.Model):
     slug = models.SlugField(verbose_name='Slug', unique=True)
     description = models.TextField(blank=True, verbose_name='Descrição')
     category = models.ForeignKey(
-        ProjectCategory,
-        on_delete=models.PROTECT,
-        verbose_name='Categoria'
+        ProjectCategory, on_delete=models.PROTECT, verbose_name='Categoria'
     )
     image = models.ImageField(upload_to='projects/', verbose_name='Imagem')
     live_link = models.URLField(blank=True, verbose_name='Link do Projeto')

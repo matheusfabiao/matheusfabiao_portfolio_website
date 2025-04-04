@@ -98,6 +98,30 @@ Este projeto é um website que serve como uma vitrine para o meu trabalho, habil
 O projeto estará disponível em:
 - Aplicação: `http://localhost:8000`
 - Assets (Vite): `http://localhost:5173`
+
+## 🧪 Testes
+
+O projeto utiliza pytest para testes automatizados. Os testes estão organizados na pasta `src/portfolio/tests/` e são divididos em:
+
+- `conftest.py`: Configurações e fixtures compartilhadas
+  - Configurações globais do pytest
+  - Fixtures reutilizáveis
+  - Helpers para testes
+
+- `test_models.py`: Testes para os modelos de dados
+  - Validação de campos
+  - Criação e atualização de registros
+  - Comportamentos específicos dos modelos
+
+- `test_views.py`: Testes para as views da aplicação
+  - Rotas e endpoints
+  - Respostas HTTP
+  - Renderização de templates
+
+Para executar os testes:
+```bash
+task test
+```
 - Documentação: `http://localhost:8000/docs`
 
 ## 🧪 Testes
@@ -110,33 +134,37 @@ task test
 
 ```
 .
-├── docs/                 # Documentação do projeto
-│   ├── assets/           # Recursos da documentação
-│   ├── getting_started/  # Guias de início rápido
-│   └── stylesheets/      # Estilos personalizados da documentação
-├── env_files/            # Arquivos de configuração de ambiente
-├── src/                  # Código fonte do projeto
-│   ├── core/             # Configurações principais do Django
-│   │   ├── settings.py   # Configurações do projeto
-│   │   ├── urls.py       # URLs principais
-│   │   └── wsgi.py       # Configuração WSGI
-│   ├── portfolio/        # Aplicação principal
-│   │   ├── migrations/   # Migrações do banco de dados
-│   │   ├── models.py     # Modelos de dados
-│   │   ├── views.py      # Views da aplicação
-│   │   └── urls.py       # Configuração de URLs
-│   ├── static/           # Arquivos estáticos
-│   │   ├── css/          # Estilos CSS e componentes
-│   │   ├── js/           # Scripts JavaScript
-│   │   └── img/          # Imagens e recursos visuais
-│   └── templates/        # Templates HTML
-│       ├── components/   # Componentes reutilizáveis
-│       └── portfolio/    # Templates específicos
-├── mkdocs.yml            # Configuração da documentação
-├── package.json          # Dependências do frontend
-├── pyproject.toml        # Dependências do Python
-├── vite.config.mjs       # Configuração do Vite
-└── uv.lock               # Lock file do gerenciador de pacotes Python
+├── docs/                        # Documentação do projeto
+│   ├── assets/                  # Recursos da documentação
+│   ├── getting_started/         # Guias de início rápido
+│   └── stylesheets/             # Estilos personalizados da documentação
+├── env_files/                   # Arquivos de configuração de ambiente
+├── src/                         # Código fonte do projeto
+│   ├── core/                    # Configurações principais do Django
+│   │   ├── settings.py          # Configurações do projeto
+│   │   ├── urls.py              # URLs principais
+│   │   └── wsgi.py              # Configuração WSGI
+│   ├── portfolio/               # Aplicação principal
+│   │   ├── migrations/          # Migrações do banco de dados
+│   │   ├── models.py            # Modelos de dados
+│   │   ├── views.py             # Views da aplicação
+│   │   ├── urls.py              # Configuração de URLs
+│   │   └── tests/               # Testes automatizados
+│   │       ├── conftest.py      # Configurações e fixtures de teste
+│   │       ├── test_models.py   # Testes dos modelos
+│   │       └── test_views.py    # Testes das views
+│   ├── static/                  # Arquivos estáticos
+│   │   ├── css/                 # Estilos CSS e componentes
+│   │   ├── js/                  # Scripts JavaScript
+│   │   └── img/                 # Imagens e recursos visuais
+│   └── templates/               # Templates HTML
+│       ├── components/          # Componentes reutilizáveis
+│       └── portfolio/           # Templates específicos
+├── mkdocs.yml                   # Configuração da documentação
+├── package.json                 # Dependências do frontend
+├── pyproject.toml               # Dependências do Python
+├── vite.config.mjs              # Configuração do Vite
+└── uv.lock                      # Lock file do gerenciador de pacotes Python
 ```
 
 ## 📝 Licença

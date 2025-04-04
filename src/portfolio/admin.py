@@ -14,9 +14,15 @@ class ProjectCategoryAdmin(admin.ModelAdmin):
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = (
-        'title', 'slug', 'description', 'category',
-        'image', 'live_link', 'github_link',
-        'created_at', 'updated_at'
+        'title',
+        'slug',
+        'description',
+        'category',
+        'image',
+        'live_link',
+        'github_link',
+        'created_at',
+        'updated_at',
     )
     list_filter = ('category', 'created_at')
     prepopulated_fields = {'slug': ('title',)}
