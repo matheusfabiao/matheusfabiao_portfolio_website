@@ -4,10 +4,10 @@
 {% block css %}
     {% vite_asset 'src/static/js/main.js' %}
     {% vite_hmr_client %}
-{% endblock %}
+{% endblock css %}
 
 {% block content %}
     <h1 class="text-4xl p-8">Olá, mundo!</h1>
     <!-- botão daisyui -->
     <button class="btn btn-primary ml-8">Clique aqui</button>
-{% endblock %}
+{% endblock content %}
